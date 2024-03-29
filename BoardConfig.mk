@@ -190,6 +190,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibi
 # Wi-Fi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
+# Wi-Fi
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
