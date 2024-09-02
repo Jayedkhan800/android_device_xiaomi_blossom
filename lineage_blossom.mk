@@ -17,6 +17,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 scr_resolution := 720
 
+#AlphaDroid stuffs.
+ALPHA_MAINTAINER := AsTechpro20
+
 PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
