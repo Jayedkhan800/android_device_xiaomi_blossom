@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_blossom.mk
+    $(LOCAL_DIR)/arrow_blossom.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_blossom-user \
-    bliss_blossom-userdebug \
-    bliss_blossom-eng
+    arrow_blossom-user \
+    arrow_blossom-userdebug \
+    arrow_blossom-eng
 
