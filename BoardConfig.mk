@@ -6,6 +6,8 @@
 
 BOARD_VENDOR := xiaomi
 
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 DEVICE_PATH := device/xiaomi/blossom
 
 # OTA
