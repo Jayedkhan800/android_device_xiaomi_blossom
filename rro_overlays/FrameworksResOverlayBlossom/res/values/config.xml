@@ -493,7 +493,7 @@
          alpha compositing functionality in hardware.  If set, the window
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
-    <!-- <bool name="config_sf_limitedAlpha">true</bool> -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
