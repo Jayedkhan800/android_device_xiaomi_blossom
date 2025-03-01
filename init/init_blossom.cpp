@@ -107,10 +107,10 @@ void vendor_load_properties()
         heapmaxfree = "8m";
         // from lmkd defaults for low ram devices
         // tuned a bit "higher end"
-        partialstall = "120";
-        completestall = "360";
-        thrashlim = "60";
-        thrashlimdec = "35";
+        partialstall = "135";
+        completestall = "540";
+        thrashlim = "50";
+        thrashlimdec = "40";
         swapfreelow = "15";
         upressure = "70";
         property_override("ro.config.art_lowmem", "true");
