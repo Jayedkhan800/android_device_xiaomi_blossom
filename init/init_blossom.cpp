@@ -107,16 +107,26 @@ void vendor_load_properties()
         heapmaxfree = "8m";
         // from lmkd defaults for low ram devices
         // tuned a bit "higher end"
-    property_override("ro.lmk.psi_partial_stall_ms", partialstall);
-    property_override("ro.lmk.psi_complete_stall_ms", completestall);
-    property_override("ro.lmk.thrashing_limit", thrashlim);
-    property_override("ro.lmk.thrashing_limit_decay", thrashlimdec);
-    property_override("ro.lmk.swap_free_low_percentage", swapfreelow);
-    property_override("ro.lmk.upgrade_pressure", upressure);
+        partialstall = "135";
+        completestall = "540";
+        thrashlim = "50";
+        thrashlimdec = "40";
+        swapfreelow = "15";
+        upressure = "70";
+        property_override("ro.config.art_lowmem", "true");
+    }
+
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
     property_override("dalvik.vm.heapsize", heapsize);
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    property_override("ro.lmk.psi_partial_stall_ms", partialstall);
+    property_override("ro.lmk.psi_complete_stall_ms", completestall);
+    property_override("ro.lmk.thrashing_limit", thrashlim);
+    property_override("ro.lmk.thrashing_limit_decay", thrashlimdec);
+    property_override("ro.lmk.swap_free_low_percentage", swapfreelow);
+    property_override("ro.lmk.upgrade_pressure", upressure);
 }
