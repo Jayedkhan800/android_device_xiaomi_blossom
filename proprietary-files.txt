@@ -972,3 +972,6 @@ vendor/lib/libhwminijail.so
 # UDF (Userspace debugging framework)
 vendor/lib/libudf.so
 vendor/lib64/libudf.so
+
+# VNDK
+system/lib/libutils.so:vendor/lib/libutils-v30.so
