@@ -19,6 +19,8 @@ scr_resolution := 720
 TARGET_SUPPORTS_BLUR := true
 TARGET_ENABLE_BLUR := true
 
+INFINITY_MAINTAINER := "Jayed Khan"
+
 PRODUCT_NAME := infinity_blossom
 PRODUCT_DEVICE := blossom
 PRODUCT_MANUFACTURER := Xiaomi
