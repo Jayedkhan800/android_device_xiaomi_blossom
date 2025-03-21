@@ -18,6 +18,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 scr_resolution := 720
 TARGET_SUPPORTS_BLUR := true
 TARGET_ENABLE_BLUR := true
+MISTOS_MAINTAINER="Jayed Khan"
+PRODUCT_NO_CAMERA := false
+WITH_GMS := false
 
 PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := blossom
