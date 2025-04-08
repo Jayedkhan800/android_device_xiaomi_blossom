@@ -486,6 +486,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libprocessgroup_shim \
     libshim_audio \
     libshim_beanpod \
     libshim_sensors \
