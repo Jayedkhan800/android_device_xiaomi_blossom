@@ -103,7 +103,6 @@ vendor/lib/libmtcloader.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkshifter_vendor.so
 vendor/lib/libmtktinyxml.so
-vendor/lib/libpkm.so
 vendor/lib/libsimaka.so
 vendor/lib/libverno.so
 vendor/lib/libvolte_core_shr.so
