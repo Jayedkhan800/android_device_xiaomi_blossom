@@ -27,6 +27,7 @@ source "${HELPER}"
 function vendor_imports() {
     cat <<EOF >>"$1"
 		"hardware/mediatek",
+		"hardware/mediatek/libmtkperf_client",
 EOF
 }
 
