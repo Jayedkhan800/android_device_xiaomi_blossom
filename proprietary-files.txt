@@ -371,7 +371,10 @@ vendor/lib/libmsnr.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libstereoinfoaccessor_vsdof.so
-vendor/lib/vendor.mediatek.hardware.audio@6.1.so
+
+# Audio - from sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1675947631259 release-keys
+vendor/lib/vendor.mediatek.hardware.audio@6.1.so|3fbe8411fa37e64116bf2c93734349b343266e15
+vendor/lib64/vendor.mediatek.hardware.audio@6.1.so|7247c3d608d23fa3b659bf2ccbcad628653aebe3
 
 # Media
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
