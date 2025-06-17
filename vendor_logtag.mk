@@ -47,6 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.DataDispatcher=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.DcFcMgr=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.ExternalSimMgr=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.HWUI=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GED=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GPUAUX=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GraphicBuffer=$(VENDOR_LOG_LEVEL) \
