@@ -608,7 +608,7 @@
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.7</item>
 
     <!-- The amount to scale reduced scale snapshots for Overview and snapshot starting windows.
          Reduced scale snapshots are loaded before full screen snapshots to improve load times and
