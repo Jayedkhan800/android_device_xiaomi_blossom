@@ -20,7 +20,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Always preopt extracted APKs to prevent extracting out of the APK
 # for gms modules.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
@@ -214,10 +214,11 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
 
-PRODUCT_COPY_FILES += \
+	PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libutils-v32.so \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libutils-v32.so
 
+	
 # Wi-Fi
 PRODUCT_PACKAGES += \
     wpa_supplicant \
@@ -244,8 +245,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor \
     android.hardware.nfc@1.2-service.samsung \
     com.android.nfc_extras \
-    Tag \
-    NfcNci
+    Tag
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -262,7 +262,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor \
     libutils-v30 \
-    libutils-v32
+    libutils-v32 \
+    libshim_utils
 
 PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
