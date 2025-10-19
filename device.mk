@@ -26,6 +26,7 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
     frameworks/base/boot/boot-image-profile.txt \
     frameworks/base/boot/boot-image-profile-extra.txt
+
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 DONT_DEXPREOPT_PREBUILTS := true
@@ -48,6 +49,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Malloc
+PRODUCT_DISABLE_SCUDO := true
 
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
