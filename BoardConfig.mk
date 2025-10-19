@@ -60,8 +60,7 @@ $(call soong_config_set,libinit,vendor_init_lib,libinit_blossom)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_blossom
 
 # Jemalloc
-MALLOC_SVELTE := true
-MALLOC_SVELTE_FOR_LIBC32 := true
+MALLOC_LOW_MEMORY := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
