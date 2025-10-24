@@ -84,3 +84,6 @@ on property:sys.boot_completed=1
 
     # disably systracker
     write /sys/bus/platform/drivers/systracker/tracker_run 0
+
+    # reconfig lmkd props
+    setprop lmkd.reinit 1
