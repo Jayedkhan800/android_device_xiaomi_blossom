@@ -261,10 +261,13 @@ vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
+vendor/bin/charon
 vendor/bin/epdg_wod
 vendor/bin/gsm0710muxd
 vendor/bin/netdagent
 vendor/bin/netdc
+vendor/bin/starter
+vendor/bin/stroke
 vendor/etc/apdb/APDB_MT6765_S01__W2043
 vendor/etc/apdb/APDB_MT6765_S01__W2043_ENUM
 vendor/etc/init/gsm0710muxd.rc
