@@ -109,7 +109,7 @@ void vendor_load_properties()
         // tuned a bit "higher end"
         partialstall = "135";
         completestall = "540";
-        thrashlim = "50";
+        thrashlim = "55";
         thrashlimdec = "40";
         swapfreelow = "15";
         upressure = "70";
