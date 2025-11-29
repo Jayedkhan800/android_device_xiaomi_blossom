@@ -140,7 +140,7 @@ lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
-lib64/libmtk_vt_wrapper.so
+lib64/libmtk_vt_wrapper.so:system_ext/lib64/libmtk_vt_wrapper.so;DISABLE_DEPS
 lib64/libmtkavenhancements.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
@@ -252,7 +252,7 @@ system_ext/lib64/libimsma_adapt.so|8355d71bcb992d1f203824a1b07fa48da1f2ff50
 system_ext/lib64/libimsma_rtp.so|25b249764ba9df7d89f3af209f38e4cb4993ddb3
 system_ext/lib64/libimsma_socketwrapper.so|5a26aae9eee36b9e5dc8875aa68b20ced2e1b676
 system_ext/lib64/libmtk_vt_service.so|6fdb05eb75c1c1db258fd64b24dffd4d5d208484
-system_ext/lib64/libmtk_vt_wrapper.so|bfe8b004442b6450dbaddf91d9ddddd26d4f1eed
+system_ext/lib/libmtk_vt_wrapper.so;DISABLE_DEPS|f25007d81b2a19b3b0564dea9dcf8f18fe52cc30
 system_ext/lib64/libsignal.so|5595f5d7b6e7320572ec05ac199f951d141b516a
 system_ext/lib/libsink.so:system_ext/lib/libsink-mtk.so;FIX_SONAME|97c63b4f52be6009c632dec9e15822ab6a4162ac
 system_ext/lib64/libsource.so|ae532bd41547fd72c77456a94843fe94201d947c|9ff8dca8e342b733b32a4dd4f5da72c6630518ad
