@@ -80,7 +80,6 @@ vendor/bin/volte_stack.mt6765
 vendor/bin/volte_ua
 vendor/bin/volte_ua.mt6765
 vendor/bin/wfca
-vendor/etc/init/dmc_core.rc
 vendor/etc/init/init.volte_imcb.rc
 vendor/etc/init/init.volte_imsm_93.rc
 vendor/etc/init/init.volte_md_status.rc
@@ -113,7 +112,6 @@ vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwo.so
-vendor/lib/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libwapi.so
@@ -151,12 +149,8 @@ lib64/libvcodec_capenc.so
 priv-app/ImsService/ImsService.apk
 system_ext/lib/libimsma.so|c2e569433c38f70a551e2d1a54e131be14541742
 system_ext/lib/libsink.so:system_ext/lib/libsink-mtk.so;FIX_SONAME|97c63b4f52be6009c632dec9e15822ab6a4162ac
-system_ext/lib/vendor.mediatek.hardware.dmc@1.1.so
-system_ext/lib/vendor.mediatek.hardware.dmc@1.2.so
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.dmc@1.1.so
-system_ext/lib64/vendor.mediatek.hardware.dmc@1.2.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
 # GPS
@@ -249,7 +243,6 @@ vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/dmc_core
 vendor/bin/epdg_wod
 vendor/bin/gsm0710muxd
 vendor/bin/netdagent
