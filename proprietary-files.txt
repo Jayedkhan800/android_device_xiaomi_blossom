@@ -61,8 +61,6 @@ vendor/firmware/Conf_MultipleTest_ab.ini
 # Power
 vendor/etc/fstb.cfg
 vendor/lib/hw/power.default.so
-vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so
-vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.power@1.1.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
@@ -95,7 +93,6 @@ vendor/lib/libMtkSpeechEnh.so
 vendor/lib/libasn1c_core.so
 vendor/lib/libasn1c_mapi.so
 vendor/lib/libcharon-ss.so
-vendor/lib/libdecrypt.so
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/libmnetlink_v104.so
 vendor/lib/libmsbc_mtk.so
@@ -200,7 +197,6 @@ vendor/etc/init/init.bt_drv.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
 vendor/lib/libbluetooth_relayer.so
@@ -210,7 +206,6 @@ vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbluetooth_relayer.so
@@ -232,8 +227,7 @@ vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
--vendor/lib64/libwifi-hal-mtk.so
-vendor/lib64/libwifitest.so
+vendor/lib64/libwifi-hal-mtk.so
 
 # IMS - from plato-user 14 UP1A.230620.001 V816.0.12.0.ULQMIXM release-keys
 system_ext/bin/vtservice|eeb08595c53be9d7a69ba5b677b5604f753eab37
@@ -378,7 +372,6 @@ vendor/etc/aurisys_param/Speech_AudioParam.xml
 vendor/lib/hw/audio.primary.mt6765.so
 vendor/lib/hw/audio.r_submix.mt6765.so
 vendor/lib/hw/audio.usb.mt6765.so
-vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 -vendor/lib/libalsautils-v30.so
 vendor/lib/libaudio_param_parser-vnd.so
@@ -932,7 +925,6 @@ vendor/lib/com.fingerprints.extension@1.0.so
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
-vendor/bin/sensors_test
 vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
 vendor/lib/hw/sensors.mt6765.so
 vendor/lib/libhwm.so
@@ -962,9 +954,6 @@ vendor/lib/libthermalalgo.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/thermal_hal.so
 
-# CIT
-vendor/etc/pm_test_item_config.xml
-
 # AAL
 vendor/lib/libaal_cust.so
 vendor/lib/libaal_key.so
@@ -980,9 +969,6 @@ vendor/lib/libaedv.so
 vendor/lib/libladder.so
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
-
-# Configstore
-vendor/lib/libhwminijail.so
 
 # UDF (Userspace debugging framework)
 vendor/lib/libudf.so
