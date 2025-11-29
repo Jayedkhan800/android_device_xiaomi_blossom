@@ -38,7 +38,8 @@ function lib_to_package_fixup_vendor_variants() {
     fi
 
     case "$1" in
-        vendor.mediatek.hardware.mtkradioex@2.0)
+        vendor.mediatek.hardware.mtkradioex@2.0 | \
+            vendor.mediatek.hardware.videotelephony@1.0)
             echo "$1_vendor"
             ;;
         *)
