@@ -109,6 +109,7 @@ vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwo.so
+vendor/lib/vendor.mediatek.hardware.mtkradioex@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libwapi.so
@@ -147,7 +148,7 @@ priv-app/ImsService/ImsService.apk
 system_ext/lib/libimsma.so|c2e569433c38f70a551e2d1a54e131be14541742
 system_ext/lib/libsink.so:system_ext/lib/libsink-mtk.so;FIX_SONAME|97c63b4f52be6009c632dec9e15822ab6a4162ac
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_system_ext|fa9b5f7c9603c2eb86b94b33df2e7331c4a151b0
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
 # GPS
