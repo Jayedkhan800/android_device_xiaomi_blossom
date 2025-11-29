@@ -481,9 +481,9 @@ vendor/lib/libgpud.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libgralloc_metadata.so
 vendor/lib/libgralloctypes_mtk.so
-vendor/lib/libimageio.so
-vendor/lib/libimageio_plat_drv.so
-vendor/lib/libimageio_plat_pipe.so
+vendor/lib/libimageio.so;DISABLE_DEPS
+vendor/lib/libimageio_plat_drv.so;DISABLE_DEPS
+vendor/lib/libimageio_plat_pipe.so;DISABLE_DEPS
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libmemtrack_GL.so
@@ -522,9 +522,9 @@ vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
-vendor/lib64/libimageio.so
-vendor/lib64/libimageio_plat_drv.so
-vendor/lib64/libimageio_plat_pipe.so
+vendor/lib64/libimageio.so;DISABLE_DEPS
+vendor/lib64/libimageio_plat_drv.so;DISABLE_DEPS
+vendor/lib64/libimageio_plat_pipe.so;DISABLE_DEPS
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmemtrack_GL.so
