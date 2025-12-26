@@ -144,6 +144,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
+#Speaker_layout_channel_mask field
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
+PRODUCT_PACKAGES += \
+    libstagefright_softomx_plugin.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom
