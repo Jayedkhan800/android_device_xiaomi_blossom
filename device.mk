@@ -241,10 +241,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor
 
-# Biometrics
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor:32
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0.vendor \
