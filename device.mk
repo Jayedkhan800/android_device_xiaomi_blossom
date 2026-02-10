@@ -98,7 +98,11 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     ueventd.mtk.rc \
     init.mt6765.volte.rc \
-    init.target.rc
+    init.angelica.volte.rc \
+    init.angelican.volte.rc \
+    init.angelicain.volte.rc \
+    init.cattail.volte.rc \
+    init.cattail.volte.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
