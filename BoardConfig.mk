@@ -10,6 +10,7 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 DEVICE_PATH := device/xiaomi/blossom
 
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := dandelion,angelica,angelican,cattail,angelicain,blossom
 AB_OTA_UPDATER := false
