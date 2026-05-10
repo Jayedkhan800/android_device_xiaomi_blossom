@@ -307,10 +307,14 @@
         <item>255</item>
         <item>255</item>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <item>255</item>
 =======
         <item>255</item
 >>>>>>> e454e10 (blossom : Extend brightness arrays to prevent ArrayIndexOutOfBoundsException)
+=======
+        <item>255</item>
+>>>>>>> 1b0bb4e (blossom : applied proper syntax)
     </integer-array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
