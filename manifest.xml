@@ -169,6 +169,15 @@
         <fqname>@1.1::INvram/default</fqname>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
+=======
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IThermal/default</fqname>
+        <fqname>@2.0::IThermal/default</fqname>
+    </hal>
+    <hal format="hidl">
+>>>>>>> f89921b (blossom: add memtrack HAL entries)
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IOmx/default</fqname>
