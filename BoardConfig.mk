@@ -11,7 +11,12 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 DEVICE_PATH := device/xiaomi/blossom
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+MALLOC_LOW_MEMORY := true
+
+>>>>>>> c319e47 (blossom : Use MALLOC_LOW_MEMORY)
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/blossom
 BOARD_PREBUILT_KERNEL_HEADERS := device/xiaomi/blossom-kernel/headers
