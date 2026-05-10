@@ -13,6 +13,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MIUICAMERA
 $(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 
@@ -21,6 +22,11 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 
 =======
 >>>>>>> f4f0f33 (blossom: Disable VINTF kernel enforcement and override kernel version)
+=======
+# MIUICAMERA
+$(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
+
+>>>>>>> 337c822 (blossom : Add MiUiCam)
 # Disable kernel requirement enforcement for VINTF compatibility
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
