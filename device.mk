@@ -12,12 +12,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
 
+<<<<<<< HEAD
 # MIUICAMERA
 $(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 
 # Lunaris Dolby 
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+=======
+>>>>>>> f4f0f33 (blossom: Disable VINTF kernel enforcement and override kernel version)
 # Disable kernel requirement enforcement for VINTF compatibility
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
