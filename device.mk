@@ -20,6 +20,7 @@ $(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 # Lunaris Dolby 
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+<<<<<<< HEAD
 =======
 >>>>>>> f4f0f33 (blossom: Disable VINTF kernel enforcement and override kernel version)
 =======
@@ -27,6 +28,8 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 $(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 
 >>>>>>> 337c822 (blossom : Add MiUiCam)
+=======
+>>>>>>> 04a9c02 (blossom : Add Dolby audio support in audio effects and media codecs)
 # Disable kernel requirement enforcement for VINTF compatibility
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
