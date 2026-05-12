@@ -57,10 +57,12 @@ cc_library_shared {
     vendor: true
 }
 
-
 cc_library {
     name: "libshim_base",
     shared_libs: ["libbase"],
-    srcs: ["libbase/logging.cpp"],
+        srcs: [
+        "libbase/logging.cpp",
+        "libbase/strings.cpp",
+    ],
     vendor: true
 }
