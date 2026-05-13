@@ -21,4 +21,4 @@ genfscon sysfs /kernel/gpu/gpu_(min|max)_clock          u:object_r:sysfs_mtk_gpu
 # DT2W
 genfscon proc  /tp_gesture                         u:object_r:proc_tp:s0
 
-genfscon sysfs /devices/platform/fpc_interrupt u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/11010000.spi u:object_r:sysfs_fingerprint:s0
