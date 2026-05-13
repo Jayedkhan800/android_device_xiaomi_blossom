@@ -65,6 +65,10 @@ function blob_fixup() {
         vendor/bin/mnld | vendor/lib*/libaalservice.so | vendor/lib*/libcam.utils.sensorprovider.so)
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
+        vendor/lib/libsysenv.so | vendor/lib*/libnvram.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libshim_base.so" "${2}" || "${PATCHELF}" --add-needed "libshim_base.so" "${2}"
+            ;;
         lib/libsource.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
