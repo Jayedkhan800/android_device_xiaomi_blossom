@@ -25,6 +25,14 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 DONT_DEXPREOPT_PREBUILTS := true
+PRODUCT_ENFORCE_VINTF_MANIFEST := false
+
+# Disable kernel requirement enforcement for VINTF compatibility
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
+# Override kernel version for VINTF compatibility
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.kernel.version=4.19.191
 
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
