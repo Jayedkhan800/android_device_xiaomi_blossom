@@ -142,7 +142,7 @@ lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkavenhancements.so
 lib/libsignal.so
-lib/libsink.so
+lib/libsink-mtk.so
 lib/libsource.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
@@ -152,6 +152,8 @@ lib64/libmtkavenhancements.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
 priv-app/ImsService/ImsService.apk
+system_ext/lib/libimsma.so|c2e569433c38f70a551e2d1a54e131be14541742
+system_ext/lib/libsink.so:system_ext/lib/libsink-mtk.so;FIX_SONAME|97c63b4f52be6009c632dec9e15822ab6a4162ac
 system_ext/lib/vendor.mediatek.hardware.dmc@1.1.so
 system_ext/lib/vendor.mediatek.hardware.dmc@1.2.so
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@2.0.so
