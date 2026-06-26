@@ -69,6 +69,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
             ;;
+        vendor/lib64/libutils-v30.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
         lib/libsource.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
