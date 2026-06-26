@@ -76,6 +76,13 @@ function blob_fixup() {
         lib/libsource.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
+        vendor/bin/hw/mtkfusionrild)
+            [ "$2" = "" ] && return 0
+            grep -q "libutils-v32.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
+            ;;
+        *)
+            return 1
+            ;;
     esac
 }
 
