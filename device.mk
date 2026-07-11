@@ -177,9 +177,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.composer@2.1-resources.vendor \
     android.hardware.graphics.common-V2-ndk.vendor:32 \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.memtrack@1.0-impl \
-    disable_configstore
+
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -305,7 +303,6 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
@@ -527,6 +524,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    vendor/qcom/opensource/commonsys-intf/display \
     $(LOCAL_PATH)/power-libperfmgr \
     $(LOCAL_PATH)
 
