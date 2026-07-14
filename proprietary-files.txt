@@ -161,7 +161,7 @@ vendor/lib/lbs_hidl_service-impl.so
 vendor/lib/libDR.so
 vendor/lib/libcrypto-mdapp.so
 vendor/lib/libcurl-md.so
-vendor/lib/libmnl.so
+vendor/lib/libmnl_mtk.so
 vendor/lib/vendor.mediatek.hardware.lbs@1.0.so
 
 # GPS - Configs
