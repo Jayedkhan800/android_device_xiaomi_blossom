@@ -1,4 +1,4 @@
-<compatibility-matrix version="4.0" type="framework">
+<compatibility-matrix version="6.0" type="framework">
     <hal format="hidl" optional="true">
         <name>android.hardware.audio.effect</name>
         <version>6.0</version>
@@ -43,7 +43,7 @@
         <name>android.hardware.cas</name>
         <version>1.0-2</version>
         <interface>
-            <name>IMediaCasService</name>
+	            <name>IMediaCasService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -289,4 +289,12 @@
             <instance>default</instance>
         </interface>
     </hal>
-</compatibility-matrix>
+<hal format="aidl" optional="true">
+      <name>android.hardware.memtrack</name>
+      <version>1</version>
+      <interface>
+         <name>IMemtrack</name>
+         <instance>default</instance>
+     </interface>
+  </hal>
+ </compatibility-matrix>

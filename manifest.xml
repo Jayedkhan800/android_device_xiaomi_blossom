@@ -1,5 +1,4 @@
 <manifest version="5.0" type="device" target-level="7">
-    <kernel target-level="legacy"/>
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -89,15 +88,13 @@
         </interface>
         <fqname>@2.6::IPictureQuality/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>android.hardware.memtrack</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1</version>
         <interface>
             <name>IMemtrack</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
