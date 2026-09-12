@@ -165,6 +165,9 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 PRODUCT_PACKAGES += \
     libstagefright_softomx_plugin.vendor
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom
