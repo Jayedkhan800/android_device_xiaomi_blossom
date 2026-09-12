@@ -88,14 +88,6 @@
         </interface>
         <fqname>@2.6::IPictureQuality/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>android.hardware.memtrack</name>
-        <version>1</version>
-        <interface>
-            <name>IMemtrack</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
