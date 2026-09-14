@@ -32,8 +32,6 @@ cc_library_shared {
     system_ext_specific: true,
     shared_libs: [
         "libaudioclient",
-        "libgui",
-        "libstagefright",
         "libutils",
         "libbinder",
     ],
@@ -42,7 +40,6 @@ cc_library_shared {
         "libmedia_headers",
         "libmediametrics_headers",
     ],
-    local_include_dirs: ["include"]
 }
 
 cc_library_shared {
