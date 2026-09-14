@@ -3,6 +3,7 @@
 #include <gui/SurfaceComposerClient.h>
 #include <media/AudioTrack.h>
 #include <media/stagefright/MediaMuxer.h>
+#include <new>
 #include <LegacyCallbackWrapper.h>
 
 using namespace android;
@@ -22,7 +23,13 @@ void _ZN7android10AudioTrackC1E19audio_stream_type_tj14audio_format_t20audio_cha
     const audio_offload_info_t *offloadInfo,
     const AttributionSourceState &attributionSource,
     const audio_attributes_t *pAttributes, bool doNotReconnect,
-    float maxRequiredSpeed, audio_port_handle_t selectedDeviceId);
+    float maxRequiredSpeed, audio_port_handle_t selectedDeviceId) {
+  new (thisptr)
+      AudioTrack(streamType, sampleRate, format, channelMask, frameCount, flags,
+                 cbf, notificationFrames, sessionId, transferType, offloadInfo,
+                 attributionSource, pAttributes, doNotReconnect,
+                 maxRequiredSpeed, selectedDeviceId, "");
+}
 
 void _ZN7android10AudioTrackC1E19audio_stream_type_tj14audio_format_tjj20audio_output_flags_tPFviPvS4_ES4_i15audio_session_tNS0_13transfer_typeEPK20audio_offload_info_tjiPK18audio_attributes_tbfi(
     void *thisptr, audio_stream_type_t streamType, uint32_t sampleRate,
