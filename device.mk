@@ -296,7 +296,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek
+    android.hardware.thermal-service.mediatek \
+    pixelatoms-cpp
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/thermal,$(TARGET_COPY_OUT_VENDOR)/etc)
