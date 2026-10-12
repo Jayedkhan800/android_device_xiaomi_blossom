@@ -197,7 +197,6 @@
         <item>angelican</item>
     </string-array>
     <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
-        <item>com.android.nfc</item>
         <item>com.android.se</item>
         <item>com.android.apps.tag</item>
         <item>com.google.android.tag</item>

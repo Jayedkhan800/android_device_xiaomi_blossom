@@ -701,16 +701,7 @@ service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0
 on property:ro.hardware.fp.restartimes=max
     stop vendor.fps_hal
 
-# NFC
-on property:ro.boot.hwname=angelican
-    enable vendor.samsung_nfc_hal_service
 
-service vendor.samsung_nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
-    override
-    disabled
-    class hal
-    user nfc
-    group nfc
 
 on property:sys.boot_completed=1
     # initialize powerHAL when boot is completed
