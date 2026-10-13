@@ -1,3 +1,5 @@
 allow init proc_bus_input:file r_file_perms;
 
 allow init vendor_sysfs_mmc_host:file w_file_perms;
+
+allow init volte_mount_file:file mounton;

@@ -21,3 +21,6 @@ type pps_socket, file_type;
 
 # DT2W
 type proc_tp, fs_type, proc_type;
+
+# VoLTE variant binaries bind-mounted over by init
+type volte_mount_file, vendor_file_type, file_type;
