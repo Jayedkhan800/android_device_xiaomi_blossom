@@ -444,6 +444,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor
 
+# AGPS
+# mtk_agpsd looks for agps_profiles_conf2.xml in /vendor/etc/, but the blob only
+# ships it under /vendor/etc/gnss/. Provide it at the expected path as well.
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/blossom/proprietary/vendor/etc/gnss/agps_profiles_conf2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/agps_profiles_conf2.xml
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-focaltech.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-focaltech.kl \
