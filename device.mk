@@ -19,6 +19,8 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+PRODUCT_DEX_PREOPT_MODULE_CONFIGS += mediatek-telephony-common=disable
+
 # Always preopt extracted APKs to prevent extracting out of the APK
 # for gms modules.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
