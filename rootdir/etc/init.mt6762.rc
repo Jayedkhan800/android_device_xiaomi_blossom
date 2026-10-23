@@ -687,7 +687,7 @@ on boot
     insmod /vendor/lib/modules/fpsgo.ko
 
 # Fingerprint
-service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service_blossom
     class late_start
     user system
     group system input uhid
