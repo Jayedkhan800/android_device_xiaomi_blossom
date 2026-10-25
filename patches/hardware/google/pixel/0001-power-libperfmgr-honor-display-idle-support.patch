@@ -1,0 +1,37 @@
+From 97476252d46abdc655b639af03fc986d32258e25 Mon Sep 17 00:00:00 2001
+From: Jayedkhan800 <tanvirgaming859@gmail.com>
+Date: Sun, 25 Oct 2026 13:17:28 +0000
+Subject: [PATCH] power-libperfmgr: Honor display idle support property in Init
+
+Init() probes the display idle sysfs nodes unconditionally, even when
+vendor.powerhal.disp.idle_support is false. Devices whose kernel does not
+expose those nodes then log "Unable to open fb idle state path (2)" on
+every boot, even though Acquire() already falls back to a direct boost.
+
+Skip the probe when display idle detection is disabled by configuration.
+
+Change-Id: Iaff95b558c0e51c55e65c2da683e19a258df146e
+Signed-off-by: Jayedkhan800 <tanvirgaming859@gmail.com>
+---
+ power-libperfmgr/disp-power/InteractionHandler.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/power-libperfmgr/disp-power/InteractionHandler.cpp b/power-libperfmgr/disp-power/InteractionHandler.cpp
+index 9cb7f1e..b96b0ac 100644
+--- a/power-libperfmgr/disp-power/InteractionHandler.cpp
++++ b/power-libperfmgr/disp-power/InteractionHandler.cpp
+@@ -95,6 +95,11 @@ bool InteractionHandler::Init() {
+     if (mState != INTERACTION_STATE_UNINITIALIZED)
+         return true;
+ 
++    // Display idle detection is disabled by configuration; Acquire() will
++    // boost directly instead of waiting for idle.
++    if (!kDisplayIdleSupport)
++        return false;
++
+     int fd = FbIdleOpen();
+     if (fd < 0)
+         return false;
+-- 
+2.55.0
+
