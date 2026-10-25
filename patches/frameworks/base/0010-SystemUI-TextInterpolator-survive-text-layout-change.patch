@@ -1,0 +1,99 @@
+From f87c033234d1bddd3dfe2574d7b882a7c298c871 Mon Sep 17 00:00:00 2001
+From: Jayedkhan800 <tanvirgaming859@gmail.com>
+Date: Sun, 25 Oct 2026 15:01:22 +0000
+Subject: [PATCH] SystemUI: TextInterpolator: survive text layout changes
+
+TextInterpolator caches the glyph IDs of the shaped text and checks on
+every re-shape that they are unchanged. That assumption breaks when the
+typeface or the font fallback changes while a clock animation is running,
+and the require() then takes SystemUI down:
+
+  E AndroidRuntime: FATAL EXCEPTION: main
+  E AndroidRuntime: Process: com.android.systemui
+  E AndroidRuntime: java.lang.IllegalArgumentException: The new layout has different glyph ID at 0
+  E AndroidRuntime:   at com.android.systemui.animation.TextInterpolator.updatePositionsAndFonts(TextInterpolator.kt:431)
+  E AndroidRuntime:   at com.android.systemui.clocks.numoverlap.view.NumberOverlapClockViewGroup.onMeasure
+
+SystemUI restarting wipes the whole UI, which looks like all apps were
+killed. Rebuild the cached layout when it no longer matches, and keep the
+previous one if even the rebuild is not interpolatable, instead of
+crashing.
+
+Signed-off-by: Jayedkhan800 <tanvirgaming859@gmail.com>
+---
+ .../systemui/animation/TextInterpolator.kt    | 31 +++++++++++++++++--
+ 1 file changed, 29 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/animation/src/com/android/systemui/animation/TextInterpolator.kt b/packages/SystemUI/animation/src/com/android/systemui/animation/TextInterpolator.kt
+index 4de78dae6..f02977f38 100644
+--- a/packages/SystemUI/animation/src/com/android/systemui/animation/TextInterpolator.kt
++++ b/packages/SystemUI/animation/src/com/android/systemui/animation/TextInterpolator.kt
+@@ -23,6 +23,7 @@ import android.graphics.text.PositionedGlyphs
+ import android.text.Layout
+ import android.text.TextPaint
+ import android.text.TextShaper
++import android.util.Log
+ import android.util.MathUtils.lerp
+ import androidx.core.graphics.withSave
+ import com.android.internal.graphics.ColorUtils
+@@ -157,7 +158,15 @@ class TextInterpolator(
+      * used for interpolation.
+      */
+     fun onTargetPaintModified() {
+-        updatePositionsAndFonts(shapeText(layout, targetPaint), updateBase = false)
++        try {
++            updatePositionsAndFonts(shapeText(layout, targetPaint), updateBase = false)
++        } catch (e: IllegalArgumentException) {
++            // The reshaped text no longer matches the cached layout, e.g. because the typeface
++            // or the font fallback changed while an animation was running. Rebuild the cached
++            // layout instead of taking SystemUI down.
++            Log.w(TAG, "Text layout changed, rebuilding it instead of crashing", e)
++            shapeText(layout)
++        }
+         listener?.onPaintModified(targetPaint)
+     }
+ 
+@@ -168,7 +177,12 @@ class TextInterpolator(
+      * used for interpolation.
+      */
+     fun onBasePaintModified() {
+-        updatePositionsAndFonts(shapeText(layout, basePaint), updateBase = true)
++        try {
++            updatePositionsAndFonts(shapeText(layout, basePaint), updateBase = true)
++        } catch (e: IllegalArgumentException) {
++            Log.w(TAG, "Text layout changed, rebuilding it instead of crashing", e)
++            shapeText(layout)
++        }
+         listener?.onPaintModified(basePaint)
+     }
+ 
+@@ -288,6 +302,17 @@ class TextInterpolator(
+ 
+     // Shape text with current paint parameters.
+     private fun shapeText(layout: Layout) {
++        try {
++            shapeTextOrThrow(layout)
++        } catch (e: IllegalArgumentException) {
++            // The base and target paints produced incompatible layouts, e.g. with different
++            // glyph IDs because of font fallback. Keep the previously cached layout instead
++            // of taking the caller down.
++            Log.w(TAG, "Incompatible text layout, keeping the previous one", e)
++        }
++    }
++
++    private fun shapeTextOrThrow(layout: Layout) {
+         val baseLayout = shapeText(layout, basePaint)
+         val targetLayout = shapeText(layout, targetPaint)
+ 
+@@ -564,6 +589,8 @@ class TextInterpolator(
+     }
+ 
+     companion object {
++        private const val TAG = "TextInterpolator"
++
+         private fun Layout.getLineDrawOrigin(lineNo: Int): Float {
+             return if (getParagraphDirection(lineNo) == Layout.DIR_LEFT_TO_RIGHT) {
+                 getLineLeft(lineNo)
+-- 
+2.55.0
+
