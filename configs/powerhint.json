@@ -22,7 +22,11 @@
         "400000"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "CPULittleClusterMinFreq",
@@ -45,7 +49,12 @@
         "501000",
         "400000"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 15,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "CPUBigClusterMaxFreq",
@@ -69,7 +78,11 @@
         "900000"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "CPUBigClusterMinFreq",
@@ -92,7 +105,12 @@
         "979000",
         "900000"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 15,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "GPUGEDBoost",
@@ -102,7 +120,11 @@
         "1"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "GPUDVFSMargin",
@@ -113,7 +135,11 @@
         "50"
       ],
       "ResetOnInit": true,
-      "DefaultIndex": 0
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "DRAMOppMin",
@@ -125,7 +151,11 @@
         "2"
       ],
       "ResetOnInit": true,
-      "DefaultIndex": 0
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "UclampMin",
@@ -137,7 +167,12 @@
         "25",
         "0"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "BGUclampMin",
@@ -149,7 +184,12 @@
         "25",
         "0"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "FGUclampMin",
@@ -161,7 +201,12 @@
         "25",
         "0"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "TAUclampMin",
@@ -173,7 +218,12 @@
         "25",
         "0"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": true,
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     },
     {
       "Name": "PowerHALMainState",
@@ -182,7 +232,9 @@
         "SUSTAINED_PERFORMANCE",
         ""
       ],
-      "Type": "Property"
+      "Type": "Property",
+      "DefaultIndex": 1,
+      "ResetOnInit": false
     },
     {
       "Name": "PowerHALAudioState",
@@ -191,7 +243,9 @@
         "AUDIO_STREAMING_LOW_LATENCY",
         ""
       ],
-      "Type": "Property"
+      "Type": "Property",
+      "DefaultIndex": 1,
+      "ResetOnInit": false
     },
     {
       "Name": "PowerHALRenderingState",
@@ -200,7 +254,9 @@
         "EXPENSIVE_RENDERING",
         ""
       ],
-      "Type": "Property"
+      "Type": "Property",
+      "DefaultIndex": 1,
+      "ResetOnInit": false
     },
     {
       "Name": "DoubleTapToWakeEnable",
@@ -208,7 +264,13 @@
       "Values": [
         "1",
         "0"
-      ]
+      ],
+      "DefaultIndex": 1,
+      "ResetOnInit": false,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false
     }
   ],
   "Actions": [
