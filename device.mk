@@ -172,6 +172,10 @@ $(call soong_config_set_bool,libion,legacy_impl,true)
 PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom
 
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensor-hal-shim
+
 # Display
 TARGET_SCREEN_DENSITY := 320
 
@@ -244,7 +248,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
-    libwifi-hal-wrapper \
     android.hardware.wifi-service
 
 PRODUCT_COPY_FILES += \

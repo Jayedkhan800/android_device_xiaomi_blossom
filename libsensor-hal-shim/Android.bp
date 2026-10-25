@@ -1,0 +1,16 @@
+cc_library_shared {
+    name: "libsensor-hal-shim",
+    srcs: ["sensor_shim_ops.cpp"],
+    export_include_dirs: ["."],
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libutils",
+    ],
+    header_libs: ["libhardware_headers"],
+    vendor: true,
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+}
