@@ -100,3 +100,10 @@ prebuilt_etc {
     relative_install_path: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.dandelion.volte.rc",
+    src: "etc/init.dandelion.volte.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}

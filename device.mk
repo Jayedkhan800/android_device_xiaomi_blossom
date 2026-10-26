@@ -102,7 +102,8 @@ PRODUCT_PACKAGES += \
     init.angelica.volte.rc \
     init.angelican.volte.rc \
     init.angelicain.volte.rc \
-    init.cattail.volte.rc
+    init.cattail.volte.rc \
+    init.dandelion.volte.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -248,7 +249,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
-    android.hardware.wifi-service
+    android.hardware.wifi-service \
+    libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
