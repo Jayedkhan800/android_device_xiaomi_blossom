@@ -718,6 +718,13 @@ service vendor.charger /system/bin/charger
     file /sys/fs/pstore/console-ramoops r
     file /proc/last_kmsg r
 
-on property:sys.boot_completed=1
-    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+# statsd is not wanted on this device: it accumulates wakeups over long uptimes
+# and this is a 2 GB mt6765 that cannot spare them. Stopping it only after
+# sys.boot_completed leaves system_server bound to a dead binder for the whole
+# session, which floods logcat with
+#   E/StatsManagerService: android.os.DeadObjectException
+# on every metrics puller registration. Stopping it from early-init instead
+# means it is never started, so clients never get a live binder to lose.
+# Keep this if you rely on it for battery numbers; remove if you don't.
+on early-init
     stop statsd
