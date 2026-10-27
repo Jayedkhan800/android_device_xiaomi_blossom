@@ -19,8 +19,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DISABLE_SCUDO := true
 
 scr_resolution := 720
-TARGET_SUPPORTS_BLUR := true
-TARGET_ENABLE_BLUR := true
 
 PRODUCT_NAME := lineage_blossom
 PRODUCT_DEVICE := blossom
