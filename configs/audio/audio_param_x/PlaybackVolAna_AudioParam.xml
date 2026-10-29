@@ -38,13 +38,13 @@
   <ParamUnitPool>
     <ParamUnit param_id="0">
       <Param name="headset_pga" value="-1"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
     <ParamUnit param_id="1">
       <Param name="headset_pga" value="12"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
@@ -80,25 +80,25 @@
     </ParamUnit>
     <ParamUnit param_id="7">
       <Param name="headset_pga" value="14"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
     <ParamUnit param_id="8">
       <Param name="headset_pga" value="14"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
     <ParamUnit param_id="9">
       <Param name="headset_pga" value="-1"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
     <ParamUnit param_id="10">
       <Param name="headset_pga" value="-1"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
@@ -110,13 +110,13 @@
     </ParamUnit>
     <ParamUnit param_id="12">
       <Param name="headset_pga" value="-1"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
     <ParamUnit param_id="13">
       <Param name="headset_pga" value="12"/>
-      <Param name="speaker_pga" value="10"/>
+      <Param name="speaker_pga" value="13"/>
       <Param name="receiver_pga" value="-1"/>
       <Param name="amp" value="0,0,0,0,0,0,0,0,0,0"/>
     </ParamUnit>
