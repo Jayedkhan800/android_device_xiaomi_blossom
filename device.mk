@@ -197,6 +197,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Certs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,system/ca-certificates/files/,$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts)
