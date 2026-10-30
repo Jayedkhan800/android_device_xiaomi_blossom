@@ -22,3 +22,5 @@ genfscon sysfs /kernel/gpu/gpu_(min|max)_clock          u:object_r:sysfs_mtk_gpu
 
 # DT2W
 genfscon proc  /tp_gesture                         u:object_r:proc_tp:s0
+
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/power_supply/battery/charging_enabled u:object_r:sysfs_batteryinfo:s0

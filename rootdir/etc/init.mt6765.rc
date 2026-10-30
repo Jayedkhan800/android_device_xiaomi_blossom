@@ -293,8 +293,8 @@ on post-fs-data
     chown mediacodec system /dev/Vcodec
 
     # Charging Battery
-    chmod 0777 /sys/class/power_supply/battery/charging_enabled
     chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0664 /sys/class/power_supply/battery/charging_enabled
 
     # PMIC property
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_stop
