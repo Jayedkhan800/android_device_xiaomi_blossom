@@ -455,6 +455,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     libsensorndkbridge
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.vendor
+
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \

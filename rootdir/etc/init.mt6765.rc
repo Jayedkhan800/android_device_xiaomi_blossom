@@ -688,13 +688,15 @@ on boot
 
 # Fingerprint
 service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service_blossom
-    class late_start
+    class hal
+    interface android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint default
     user system
     group system input uhid
     # writepid /dev/cpuset/system-background/tasks
 
 service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.fingerprint@1.0-service
-    class late_start
+    class hal
+    interface vendor.focaltech.fingerprint@1.0::IFocalFingerprintService default
     user system
     group system
 
