@@ -103,6 +103,18 @@
         <value>130</value>
     </array>
     <item name="modem.controller.voltage">3700</item>
+    <modem>
+        <sleep>1</sleep>
+        <idle>1</idle>
+        <active>
+            <receive>100</receive>
+            <transmit level="0">90</transmit>
+            <transmit level="1">100</transmit>
+            <transmit level="2">110</transmit>
+            <transmit level="3">120</transmit>
+            <transmit level="4">130</transmit>
+        </active>
+    </modem>
     <array name="gps.signalqualitybased">
         <value>100</value>
         <value>110</value>
