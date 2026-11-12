@@ -104,6 +104,7 @@ BOARD_KERNEL_CMDLINE += quiet loglevel=3
 BOARD_KERNEL_CMDLINE += nodebugmon
 BOARD_KERNEL_CMDLINE += noirqdebug
 BOARD_KERNEL_CMDLINE += kasan=off
+BOARD_KERNEL_CMDLINE += androidboot.selinux=enforcing
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
