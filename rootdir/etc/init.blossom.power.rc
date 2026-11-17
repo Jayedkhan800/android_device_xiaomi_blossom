@@ -40,6 +40,9 @@ on post-fs-data
     write /proc/sys/vm/stat_interval 2
     write /proc/sys/vm/overcommit_memory 2
     write /proc/sys/vm/overcommit_ratio 100
+    write /proc/sys/vm/dirty_background_ratio 5
+    write /proc/sys/vm/dirty_ratio 15
+    write /proc/sys/vm/dirty_expire_centisecs 1000
 
 on property:sys.boot_completed=1
     # We should adjust the setting upon boot_complete
